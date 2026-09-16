@@ -1,0 +1,15 @@
+{
+  "methods": [
+    {"id": "input", "label": "Input", "description": "Original singing performance"},
+    {"id": "adaptor", "label": "Adaptor + Key", "description": "Proposed method"},
+    {"id": "plan20", "label": "BERT-APC", "description": "Context-based baseline"},
+    {"id": "key_snapping", "label": "Key Snapping", "description": "Hard tonal baseline"}
+  ],
+  "samples": [
+    {"id": "2070", "interval": "63–71 s", "audio": {"input": "audio_clip/2070/2070.input.clip.wav", "adaptor": "audio_clip/2070/2070.adaptor.reconstructed.clip.wav", "plan20": "audio_clip/2070/2070.plan20.reconstructed.clip.wav", "key_snapping": "audio_clip/2070/2070.key_snapping.reconstructed.clip.wav"}, "figures": {"discrete": "figures/f0_overlay_2070_frames_63_71.png", "mapped": "figures/mapped_f0_overlay_2070_frames_63_71.png"}},
+    {"id": "2030", "interval": "135–143 s", "audio": {"input": "audio_clip/2030/2030.input.clip.wav", "adaptor": "audio_clip/2030/2030.adaptor.reconstructed.clip.wav", "plan20": "audio_clip/2030/2030.plan20.reconstructed.clip.wav", "key_snapping": "audio_clip/2030/2030.key_snapping.reconstructed.clip.wav"}, "figures": {"discrete": "figures/f0_overlay_2030_frames_135_143.png", "mapped": "figures/mapped_f0_overlay_2030_frames_135_143.png"}},
+    {"id": "2022", "interval": "202–210 s", "audio": {"input": "audio_clip/2022/2022.input.clip.wav", "adaptor": "audio_clip/2022/2022.adaptor.reconstructed.clip.wav", "plan20": "audio_clip/2022/2022.plan20.reconstructed.clip.wav", "key_snapping": "audio_clip/2022/2022.key_snapping.reconstructed.clip.wav"}, "figures": {"discrete": "figures/f0_overlay_2022_frames_202_210.png", "mapped": "figures/mapped_f0_overlay_2022_frames_202_210.png"}},
+    {"id": "2073", "interval": "76–84 s", "audio": {"input": "audio_clip/2073/2073.input.clip.wav", "adaptor": "audio_clip/2073/2073.adaptor.reconstructed.clip.wav", "plan20": "audio_clip/2073/2073.plan20.reconstructed.clip.wav", "key_snapping": "audio_clip/2073/2073.key_snapping.reconstructed.clip.wav"}, "figures": {"discrete": "figures/f0_overlay_2073_frames_76_84.png", "mapped": "figures/mapped_f0_overlay_2073_frames_76_84.png"}},
+    {"id": "2068", "interval": "135–143 s", "audio": {"input": "audio_clip/2068/2068.input.clip.wav", "adaptor": "audio_clip/2068/2068.adaptor.reconstructed.clip.wav", "plan20": "audio_clip/2068/2068.plan20.reconstructed.clip.wav", "key_snapping": "audio_clip/2068/2068.key_snapping.reconstructed.clip.wav"}, "figures": {"discrete": "figures/f0_overlay_2068_frames_135_143.png", "mapped": "figures/mapped_f0_overlay_2068_frames_135_143.png"}}
+  ]
+}

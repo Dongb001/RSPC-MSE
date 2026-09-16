@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reference-free singing pitch correction via music-constrained sequence editing.">
+  <title>Reference-Free Singing Pitch Correction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation" data-i18n-aria="navLabel">
+      <a class="brand" href="#top" data-i18n="brand">Singing Pitch Correction</a>
+      <div class="nav-links"><a href="#abstract" data-i18n="navAbstract">Abstract</a><a href="#results" data-i18n="navResults">Results</a><a href="#samples" data-i18n="navSamples">Samples</a><a href="#citation" data-i18n="navCitation">Citation</a></div>
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to Chinese">中文</button>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero container">
+      <p class="eyebrow" data-i18n="heroEyebrow">ICASSP · RESEARCH DEMO</p>
+      <h1 data-i18n="title">Reference-Free Singing Pitch Correction via Music-Constrained Sequence Editing</h1>
+      <p class="authors" data-i18n="authors">Author(s) Name(s) · Author Affiliation(s)</p>
+      <p class="lede" data-i18n="lede">A reference-free system that detects note-level pitch errors and edits them with singing-aware context and tonal constraints—without target melodies, accompaniment, or ground-truth keys.</p>
+      <div class="hero-actions"><a class="button primary" href="#samples" data-i18n="listen">Listen to examples</a><a class="button" href="paper/Template.pdf" download><span data-i18n="readPaper">Read the paper</span> <span aria-hidden="true">↗</span></a></div>
+      <p class="notice" data-i18n="notice">The listening section uses five F0-aligned, 8-second WAV comparison clips. Audio starts loading as soon as the sample cards appear.</p>
+    </section>
+    <section id="abstract" class="section section-tint"><div class="container">
+      <div class="section-heading"><p class="eyebrow" data-i18n="abstractEyebrow">Paper overview</p><h2 data-i18n="abstractTitle">Abstract</h2></div>
+      <div class="abstract-layout"><article class="abstract-paper"><p class="abstract-label" data-i18n="abstractOriginal">Original abstract</p><p id="abstract-text"></p><p class="keywords"><strong data-i18n="keywordsLabel">Index Terms—</strong> <span id="keywords-text"></span></p></article><figure class="model-figure"><img src="paper/model_overview.png" alt="Overview of the proposed reference-free singing pitch correction framework" data-i18n-alt="modelAlt"><figcaption data-i18n="modelCaption">Fig. 1. Overview of the proposed reference-free singing pitch correction framework.</figcaption></figure></div>
+    </div></section>
+    <section id="results" class="section container">
+      <div class="section-heading"><p class="eyebrow" data-i18n="resultsEyebrow">Held-out real test set</p><h2 data-i18n="resultsTitle">Results against reference-free baselines</h2></div>
+      <div class="metric-grid"><article class="metric"><span data-i18n="inputAccuracy">Input accuracy</span><strong>73.25%</strong><small data-i18n="exactPitch">note-level exact pitch</small></article><article class="metric accent"><span data-i18n="oursAccuracy">Ours accuracy</span><strong>83.43%</strong><small data-i18n="overInput">+10.18 points over input</small></article><article class="metric"><span data-i18n="errorRepair">Error repair</span><strong>46.81%</strong><small data-i18n="inaccurateRepaired">inaccurate notes repaired</small></article><article class="metric"><span data-i18n="harmRate">Harm rate</span><strong>3.19%</strong><small data-i18n="correctChanged">correct notes changed</small></article></div>
+      <div class="table-wrap"><table class="results-table"><thead><tr><th data-i18n="tableMethod">Method</th><th><abbr title="Accuracy" data-i18n-title="accuracyTitle">Acc.</abbr> ↑</th><th><abbr title="Accuracy change relative to input" data-i18n-title="deltaTitle">ΔAcc.</abbr> ↑</th><th><abbr title="Error repair rate" data-i18n-title="repairTitle">Repair</abbr> ↑</th><th><abbr title="Correct notes changed" data-i18n-title="harmTitle">Harm</abbr> ↓</th></tr></thead><tbody><tr><td data-i18n="tableInput">Input</td><td>73.25</td><td>0.00</td><td>–</td><td>–</td></tr><tr><td data-i18n="tableKey">Key Snapping</td><td>71.76</td><td>-1.49</td><td>20.76</td><td>9.62</td></tr><tr><td>BERT-APC</td><td>79.44</td><td>+6.19</td><td>26.18</td><td>1.11</td></tr><tr class="ours-row"><td data-i18n="tableOurs">Ours</td><td>83.43</td><td>+10.18</td><td>46.81</td><td>3.19</td></tr></tbody></table></div>
+      <div class="metric-definitions"><span><b>Acc.</b> <span data-i18n="accuracyDefinition">note-level exact pitch accuracy</span></span><span><b>ΔAcc.</b> <span data-i18n="deltaDefinition">change relative to input</span></span><span><b>Repair</b> <span data-i18n="repairDefinition">erroneous notes repaired</span></span><span><b>Harm</b> <span data-i18n="harmDefinition">correct notes changed</span></span></div>
+      <p class="caption" data-i18n="resultsCaption">Reproduced from Table 1 of the paper. The proposed method improves accuracy by 3.99 percentage points over BERT-APC.</p>
+    </section>
+    <section id="samples" class="section section-tint"><div class="container">
+      <div class="section-heading"><p class="eyebrow" data-i18n="samplesEyebrow">Qualitative examples</p><h2 data-i18n="samplesTitle">Listen to all reconstructions</h2><p data-i18n="samplesIntro">Each group includes the original singing performance and three available reconstruction methods. WAV data is requested only when its Play button is pressed.</p></div>
+      <div id="sample-groups" class="sample-groups" aria-live="polite"></div>
+    </div></section>
+    <section id="citation" class="section container footer-section">
+      <div class="section-heading"><p class="eyebrow" data-i18n="resourcesEyebrow">Resources</p><h2 data-i18n="resourcesTitle">Paper and citation</h2></div>
+      <div class="resource-grid"><a class="resource-card" href="paper/Template.pdf" download><b>Template.pdf</b><span data-i18n="paperDownload">Download the 5-page paper</span></a><div class="resource-card"><b data-i18n="reconstructionNote">Reconstruction note</b><span data-i18n="reconstructionText">WAV reconstruction depends on additional audio processing tools (SOME, pitch modification, and NSF-HiFi-GAN).</span></div></div>
+      <div class="citation"><p data-i18n="citationIntro">If you use this demo, please cite the accompanying ICASSP manuscript:</p><pre data-i18n="citationText">Reference-Free Singing Pitch Correction via Music-Constrained Sequence Editing
+Author(s) Name(s), Author Affiliation(s), ICASSP (manuscript).</pre></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><span data-i18n="footerStatic">Static demo · no external dependencies</span><a href="#top" data-i18n="backTop">Back to top ↑</a></div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
